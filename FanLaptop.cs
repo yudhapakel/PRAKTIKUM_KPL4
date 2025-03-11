@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MOD_4
 {
-    internal class FanLaptop
+    public class FanLaptop
     {
-        private enum State {Quiet, Balanced, Peformanced, Turbo }
-        private State stateSekarang;
+        public enum State {Quiet, Balanced, Peformanced, Turbo }
+        static State stateSekarang = State.Quiet;
 
         public FanLaptop() 
         {
@@ -33,6 +33,25 @@ namespace MOD_4
         {
             stateSekarang = State.Turbo;
             Console.WriteLine("Fan Quiet berubah menjadi Turbo");
+        }
+        public static void Main(string[] args)
+        {
+            FanLaptop fan = new FanLaptop();
+
+            while (true)
+            {
+                Console.Write("masukan perintah kipas: ");
+
+                string perintah = Console.ReadLine();
+                switch (stateSekarang)
+                {
+                    case State.Balanced:
+                        Console.WriteLine("mode up");
+                        stateSekarang = State.Balanced;
+                        break;
+                    case State.Quiet:
+                }
+            }
         }
     }
 }

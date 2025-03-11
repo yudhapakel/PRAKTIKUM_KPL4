@@ -1,7 +1,7 @@
 ﻿using System;
 using MOD_4;
 
-class MainKodePos
+class MainProgram
 {
     static void Main()
     {
@@ -10,5 +10,7 @@ class MainKodePos
         Console.WriteLine($" Barang {produk}, Kode Produk : {KodeProduk.GetKodeProduk(produk)}");
 
         Console.WriteLine("\n---\n");
+
+
     }
 }
