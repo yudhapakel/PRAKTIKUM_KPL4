@@ -24,7 +24,7 @@ namespace MOD_4
 
         public static string GetKodeProduk(string produk)
         {
-            return KodeProduktable.ContainsKey(produk) ? KodeProduktable[produk] : "Produk Gagal ditemukan !!";
+            return KodeProduktable.ContainsKey(produk) ? KodeProduktable[produk] : " Produk Gagal ditemukan !!";
         }
     }
 }
